@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>arrays</title>
+</head>
+
+<body>
+    <h1>arrays</h1>
+
+    <script>
+        var frutas = ["Maçã", "Banana", "Manga"]
+        console.log(frutas)
+
+        //adiciona um item ao final
+        frutas.push("laranja")
+        console.log(frutas)
+
+        //remove o ultimo item
+        frutas.pop()
+        console.log(frutas)
+
+        //adiciona um item ao inicio
+        frutas.unshift("Limão")
+        console.log(frutas)
+
+        //remove o primeiro item
+        frutas.shift()
+        console.log(frutas)
+
+        //encotra posição de um item na lista
+        var posiçao = frutas.indexOf("Banana")
+        console.log(posiçao)
+
+        //ordena a lista
+        frutas.sort()
+        console.log(frutas)
+
+        //inverter as posições da lista
+        frutas.reverse()
+        console.log(frutas)
+
+        //seleciona um espaço da lista
+        var pedaço = frutas.slice(0, 2)
+        console.log(pedaço)
+
+        //remover varios itens 
+        frutas.splice(1, 2)
+        console.log(frutas)
+
+        //unifica todos os itens
+        var nome = ["Leo", "Luciano", "Souza"]
+        var nomeCompleto = nome.join(" ")
+        console.log(nomeCompleto)
+
+        //unifica duas listas 
+        var a = [1, 2, 3]
+        var b = [4, 5, 6]
+        console.log(a, b)
+
+        var unificado = a.concat(b)
+        console.log(unificado)
+
+        //acessa cada item de um array
+        var alunos = [
+            { nome: "Leo", idade: 15 },
+            { nome: "isabella", idade: 10 }
+
+        ]
+
+        alunos.forEach(function (aluno, posicao) {
+            console.log(aluno)
+            console.log(`posição ${posicao} = ${aluno.nome}`)
+        })
+
+        //encontra a posição de um item
+        var posicao = alunos.findIndex(function (aluno) {
+            return aluno.nome == "Leo"
+        })
+        console.log(posicao)
+
+        //modifica cada item do array
+        var idade =alunos.map(function(aluno){
+            return aluno.idade
+        })
+        console.log(idade)
+
+        //busca um dado no array(somente o primeiro dado)
+        var encontrado =alunos.find(function(aluno){
+            return aluno.nome =="isabella"
+        })
+        console.log(encontrado)
+
+        //busca dados no array(todos os dados encontrados)
+        var encontrados = alunos.filter(function(aluno){
+            return aluno.idade < 30
+        })
+        console.log(encontrados)
+    </script>
+</body>
+
+</html>

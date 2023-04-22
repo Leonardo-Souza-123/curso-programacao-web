@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>condições</title>
+</head>
+
+<body>
+    <h1>condições</h1>
+    <script>
+        var idade = 20
+        //compração simples
+        //maior ou igual
+
+        if (idade >= 18) {
+            console.log("maior de idade")
+        }
+        else {
+            console.log("Menor de idade")
+        }
+
+        //igual
+        if (idade == "20") console.log("é igual a '20'")
+
+
+        //estritamente igual
+        if (idade === "20") console.log("é igual a '20'")
+        else console.log("não é igual a '20'")
+
+        //diferente
+        if (idade != "20") console.log("é diferente de '20'")
+        else console.log("não é diferente de '20'")
+
+        //estritamnete diferente
+        if (idade !== "20") console.log("é diferente de '20'")
+        else console.log("não é diferente de '20'")
+
+        //maior
+        if (idade > 10) console.log("tem mais de 10 anos")
+
+        //menor
+        if (idade < 40) console.log("tem menos que 40 anos")
+
+        //menor ou igual
+        if (idade <= 20) console.log("tem 20 anos ou menos")
+
+
+
+        //Usando o eslse if
+
+        if (idade <= 10) console.log("não paga entrada")
+        else if (idade <= 16) console.log("paga meia entrada")
+        else console.log("paga entrada")
+
+
+        //Usando o AND
+        var entrada = 15
+        var saldo = 20
+
+        if (idade >= 18 && saldo >= entrada) console.log("consegue comprar")
+        else console.log("não consegue comprar")
+
+
+        //usando o OR
+        var classificação = 16
+        var responsavel = true
+
+
+        if (idade >= classificação || responsavel) console.log("permitir entrar")
+        else console.log("não permirtir entrar")
+
+        //usando switch case
+        var estado = "SP"
+        console.log(estado)
+
+
+        switch (estado) {
+            case "MG": estado = "minas gerais"; break;
+            case "ES": estado = "espirito santo"; break;
+            case "RJ": estado = "rio de janeiro"; break;
+            case "SP": estado = "sao paulo"; break;
+            default: estado = "não reconhecido"; break;
+
+        }
+
+        console.log(estado)
+
+
+
+    </script>
+
+
+</body>
+
+</html>

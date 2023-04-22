@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercico 3</title>
+    <style>
+        body {
+            background-color: lightslategray;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>exercico 3</h2>
+
+    <label for="numero">numero</label><br>
+    <input type="number" id="numero" placeholder="digite um numero"><br>
+
+    <h1>+</h1>
+
+    <label for="numero2">numero</label><br>
+    <input type="number" id="numero2" placeholder="digite outro numero"><br><br>
+
+    <button type="button" onclick="somar()">resultado</button>
+    <h3 id="resultado"></h3>
+
+    <script>
+        function somar() {
+            var numero = document.getElementById("numero").value
+            console.log(numero)
+            var numero2 = document.getElementById("numero2").value
+            console.log(numero2)
+            var resultado = Number(numero) + Number(numero2)
+            
+            
+           
+            document.getElementById("resultado").textContent = `o resultado da soma é ${resultado}`
+        }
+    </script>
+
+</body>
+
+</html>

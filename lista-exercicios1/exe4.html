@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercicio 4</title>
+
+    <style>
+        body {
+            background-color: brown;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>exercicio 4</h1>
+
+    <label for="nota">um numero</label><br><br>
+    <input type="number" id="nota" placeholder="digite sua primeira nota"><br><br>
+
+    <label for="nota2">a segunda nota</label><br><br>
+    <input type="number" id="nota2" placeholder="digite a sua segunda nota"><br><br>
+
+    <button type="button" onclick="media()">descobrir média</button>
+    <h3 id="resultado"></h3>
+
+    <script>
+
+        function media() {
+            var nota =Number(document.getElementById("nota").value)
+            console.log(nota)
+            var nota2 =Number(document.getElementById("nota2").value)
+            console.log(nota2)
+            var resto =(nota + nota2) /2
+            console.log(resto)
+
+
+
+           document.getElementById("resultado").textContent = `a média é ${resto} `
+        }
+
+    </script>
+
+</body>
+
+</html>

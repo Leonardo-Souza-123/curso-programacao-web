@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+
+<body>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque egestas maximus massa tempor
+        imperdiet.</p>
+
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque egestas maximus massa tempor
+        imperdiet.</p>
+
+    <div class="container">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque egestas maximus massa tempor
+            imperdiet.</p>
+
+    </div>
+    <div class="container">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque egestas maximus massa tempor
+            imperdiet.</p>
+
+    </div>
+
+    <label>Curtir?</label>
+    <label>
+        <input type="radio" name="curtir" value="sim">
+        sim
+    </label>
+<label>
+    <input type="radio" name="curtir" value="Não">
+    não 
+</label>
+
+<br>
+<label for="nome">Nome</label>
+<input type="text" id="nome">
+
+
+ 
+    <button type="button" onclick="acessarDOM()">acessar o documento</button>
+
+
+<script>
+function acessarDOM() {
+        //todo o corpo do documento
+        console.log(document.body)
+
+        //busca pela TAG
+
+        var paragrafos = document.getElementsByTagName("p")
+        console.log(paragrafos)
+
+        //busca pela classe
+        var divs = document.getElementsByClassName("container")
+        console.log(divs)
+
+
+        //busca pelo nome
+        var radios =document.getElementsByName("curtir")
+        console.log(radios)
+
+        //busca pelos ID
+        var nome = document.getElementById("nome")
+        console.log(nome)
+        console.log(nome.value)
+        alert(nome.value)
+
+        //busca pelo seletor
+        var curtido = document.querySelector("input[type='radio']:checked")
+        console.log(curtido)
+        console.log(curtido.value)
+
+        paragrafos= document.querySelectorAll("p")
+        console.log(paragrafos)   
+    
+    }
+ 
+
+    //inserir atributo 
+    var input = document.getElementById("nome")
+    input.setAttribute("placeholder","digite o seu nome")
+    
+    //ler o atributo
+    var atributo = input.getAttribute("type")
+    console.log(atributo)
+
+    //alteração do conteudo interno
+    var paragrafo = document.querySelector("p")
+    paragrafo.innerHTML = "alterando o html interno de um elemento"
+
+    //escutador de eventos
+    paragrafo.addEventListener("click", function(){
+        alert("la ele ")
+    })
+
+    //estilos
+    paragrafo.style.color = "pink"
+
+    var button = document.querySelector("button")
+
+    //alterar o display
+    button.style.display = "block"
+    //alterr o fundo
+    button.style.background ="dodgerblue"
+    //aterar cor do texto
+    button.style.color = "white"
+    //alterar a borda
+    button.style.border = "none"
+    //alterar a margem interna
+    button.style.padding= "10px"
+    //alterar a margin
+    button.style.margin = "10px 0"
+    //alterar o arredondamento das borda
+    button.style.borderRadius = "10px"
+    //alterar o cursor
+    button.style.cursor = "pointer"
+
+    //CRUD html
+
+    //creat - criar
+    var titulo = document.createElement("h1")
+    titulo.innerHTML = "eu sou uma h1 criada por javaScript. la ele"
+    document.body.appendChild(titulo)
+
+    //read - ler
+    var h1 = document.querySelector("h1")
+    console.log(h1.textContent)
+
+    //update - atualizar
+    var terceiroParagrafo =document.querySelector("div p")
+    terceiroParagrafo.textContent = "text atualizado via js. la ele"
+
+    //Delete - deletar
+    var segundoParagrafo = document.querySelectorAll("p")[1]
+    //segundoParagrafo.remove()
+
+    var pai = segundoParagrafo.parentElement
+    pai.removeChild(segundoParagrafo)
+    
+</script>
+</body>
+
+</html>

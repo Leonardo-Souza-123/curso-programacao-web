@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercicio 3</title>
+    <style>
+        body {
+            background-color: darkslateblue;
+            text-align: center;
+            font-family: sans-serif;
+            color: white;
+        }
+
+        form div {
+            margin: 10px 0px;
+        }
+
+        form label {
+            display: block;
+        }
+
+        form input {
+            width: 30%;
+            border-radius: 10px;
+            padding: 5px;
+            border: none;
+        }
+
+        form button {
+            background-color: lightgreen;
+            padding: 10px;
+            border-radius: 10px;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>exercicio 3</h1>
+
+    <form id="formulario" name="formulario">
+        <div>
+            <label for="milhas">milhas</label>
+            <input type="number" id = milhas name="milhas" placeholder="digite o valor" required min="0">
+        </div>
+        <div>
+            <button type="submit">calcular</button>
+        </div>
+
+    </form>
+    <h3 id="resultado"></h3>
+
+    <script>
+        document.querySelector("#formulario").addEventListener("submit", function(evento){
+            evento.preventDefault()
+
+            var milhas= document.getElementById("milhas").value
+            var quilometro = milhas * 1.6
+            document.getElementById("resultado").textContent = `${quilometro.toFixed(2)} km`
+        })
+    </script>
+</body>
+</html>

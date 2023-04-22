@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>blog</title>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        html,
+        body {
+            margin: 0%;
+            padding: 0;
+        }
+
+        body {
+            background-color: gray;
+            text-align: center;
+            color: white;
+        }
+
+        .conteudo {
+            display: flex;
+            flex-direction: row;
+            margin: 0 10%;
+        }
+
+        #titulo {
+
+            font-style: italic;
+        }
+
+        * {
+            font-family: sans-serif;
+        }
+
+        a[ href="tel:1699457556"] {
+            font-weight: bold;
+        }
+
+        a[href*="#"] {
+            font-weight: bold;
+        }
+
+        img+p {
+            font-weight: bold;
+        }
+
+        #titulo~h2 {
+            text-decoration: underline;
+        }
+
+        nav>ul {
+            list-style: none;
+            display: flex;
+            flex-direction: row;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: gray;
+            padding:5px;
+            font-size: 22px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        header {
+            background-color: white;
+            color: black;
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            height: 70px;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header>span {
+            display: flex;
+            align-items: center;
+        }
+
+        header strong {
+            font-size: 24px;
+        }
+
+        aside {
+            width: 10%;
+            position: fixed;
+            right: 0;
+        }
+
+        aside>ol {
+            text-align: left;
+
+        }
+
+        aside li {
+            margin: 10px 0;
+        }
+
+        aside a {
+            text-decoration: none;
+            color: white;
+        }
+        
+        nav a:hover {
+            background-color:gray;
+            color: white;
+        }
+        h2::before{
+            content: "<";
+            color: black;
+        }
+        h2::after{
+            content: ">";
+            color: black;
+        }
+        
+        p::first-letter{
+            font-size: 20px;
+        }
+        p::first-line{
+            font-weight: bold;
+        }
+        h2::selection{
+            background-color: red;
+        }
+        aside li::marker{
+            font-weight: bold;
+            
+        }
+        
+        </style>
+</head>
+
+<body>
+    <header>
+        <span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor"
+                class="bi bi-file-code-fill" viewBox="0 0 16 16">
+                <path
+                    d="M12 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zM6.646 5.646a.5.5 0 1 1 .708.708L5.707 8l1.647 1.646a.5.5 0 0 1-.708.708l-2-2a.5.5 0 0 1 0-.708l2-2zm2.708 0 2 2a.5.5 0 0 1 0 .708l-2 2a.5.5 0 0 1-.708-.708L10.293 8 8.646 6.354a.5.5 0 1 1 .708-.708z" />
+            </svg>
+            <strong>blog do código</strong>
+        </span>
+
+        <nav>
+            <ul>
+                <li>
+                    <a href="#">Home</a>
+                </li>
+                <li>
+                    <a href="./formulario.html">Sobre</a>
+                </li>
+            </ul>
+
+
+        </nav>
+    </header>
+    <main class="conteudo">
+        <article>
+            <h2 id="titulo">artigo sobre programação</h2>
+            <img width="600" height="350" src="https://blog.cronapp.io/wp-content/uploads/2020/09/javascript-1.jpg"
+                alt="deu ruim">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque egestas maximus massa tempor
+                imperdiet. Praesent ac malesuada massa, nec facilisis sem. Duis non vestibulum magna. Vivamus eu elit
+                eget lorem consectetur congue. Aliquam nec pharetra purus. Cras est metus, tempor non tortor iaculis,
+                bibendum dignissim libero. Phasellus congue dolor non libero tincidunt, in tincidunt turpis scelerisque.
+                Proin vehicula nulla eu sapien dictum, a consequat lacus venenatis. Nullam a laoreet eros, dictum
+                ultricies justo. Quisque nec neque porttitor, aliquam ipsum eget, pharetra quam.</p>
+            <h2 id="video">video</h2>
+            <video controls style="width:600px; height: 350px; "
+                src="C:\Users\wgd_oliveira\Videos\Captures\projeto2.mp4"></video>
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque egestas maximus massa tempor
+                imperdiet. Praesent ac malesuada massa, nec facilisis sem. Duis non vestibulum magna. Vivamus eu elit
+                eget lorem consectetur congue. Aliquam nec pharetra purus. Cras est metus, tempor non tortor iaculis,
+                bibendum dignissim libero. Phasellus congue dolor non libero tincidunt, in tincidunt turpis scelerisque.
+                Proin vehicula nulla eu sapien dictum, a consequat lacus venenatis. Nullam a laoreet eros, dictum
+                ultricies justo. Quisque nec neque porttitor, aliquam ipsum eget, pharetra quam.
+            </p>
+            <h2 id="audio">audio</h2>
+            <audio controls src="C:\Users\wgd_oliveira\Music\0020 - ft guima & tavera.wav"></audio>
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque egestas maximus massa tempor
+                imperdiet. Praesent ac malesuada massa, nec facilisis sem. Duis non vestibulum magna. Vivamus eu elit
+                eget lorem consectetur congue. Aliquam nec pharetra purus. Cras est metus, tempor non tortor iaculis,
+                bibendum dignissim libero. Phasellus congue dolor non libero tincidunt, in tincidunt turpis scelerisque.
+                Proin vehicula nulla eu sapien dictum, a consequat lacus venenatis. Nullam a laoreet eros, dictum
+                ultricies justo. Quisque nec neque porttitor, aliquam ipsum eget, pharetra quam.
+            </p>
+            <h2 id="youtube">youtube</h2>
+            <iframe width="600" height="350" src="https://www.youtube.com/embed/g9twQNpgC30"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque egestas maximus massa tempor
+                imperdiet. Praesent ac malesuada massa, nec facilisis sem. Duis non vestibulum magna. Vivamus eu elit
+                eget lorem consectetur congue. Aliquam nec pharetra purus. Cras est metus, tempor non tortor iaculis,
+                bibendum dignissim libero. Phasellus congue dolor non libero tincidunt, in tincidunt turpis scelerisque.
+                Proin vehicula nulla eu sapien dictum, a consequat lacus venenatis. Nullam a laoreet eros, dictum
+                ultricies justo. Quisque nec neque porttitor, aliquam ipsum eget, pharetra quam.
+            </p>
+            <h2 id="iframe">iframe</h2>
+            <iframe width="600" height="350" src="https://script.google.com/macros/s/AKfycbxM_WN2d5sm-i16JLFj6LsHm2Qvz1N99PLzsa-8eu60yJZouFivuhYs16H1bNrfZDRt/exec" frameborder="0"></iframe><br><br>
+
+            <a href="https://www.w3schools.com" target="_blank">clique aqui para saber mais</a><br><br>
+            <button type="button"
+                style="background-color:lightblue; border:none; padding: 10px; border-radius: 5px; cursor:pointer;">
+                curtir post
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-hand-thumbs-up-fill" viewBox="0 0 16 16">
+                    <path
+                        d="M6.956 1.745C7.021.81 7.908.087 8.864.325l.261.066c.463.116.874.456 1.012.965.22.816.533 2.511.062 4.51a9.84 9.84 0 0 1 .443-.051c.713-.065 1.669-.072 2.516.21.518.173.994.681 1.2 1.273.184.532.16 1.162-.234 1.733.058.119.103.242.138.363.077.27.113.567.113.856 0 .289-.036.586-.113.856-.039.135-.09.273-.16.404.169.387.107.819-.003 1.148a3.163 3.163 0 0 1-.488.901c.054.152.076.312.076.465 0 .305-.089.625-.253.912C13.1 15.522 12.437 16 11.5 16H8c-.605 0-1.07-.081-1.466-.218a4.82 4.82 0 0 1-.97-.484l-.048-.03c-.504-.307-.999-.609-2.068-.722C2.682 14.464 2 13.846 2 13V9c0-.85.685-1.432 1.357-1.615.849-.232 1.574-.787 2.132-1.41.56-.627.914-1.28 1.039-1.639.199-.575.356-1.539.428-2.59z" />
+                </svg>
+            </button>
+
+        </article>
+
+        <aside>
+            <ol>
+                <li>
+                    <a href="#titulo">introdução</a>
+                </li>
+                <li>
+                    <a href="#video">video</a>
+                </li>
+                <li>
+                    <a href="#audio">audio</a>
+                </li>
+                <li>
+                    <a href="#youtube">youtube</a>
+                </li>
+                <li>
+                    <a href="#iframe">iframe</a>
+                </li>
+
+            </ol>
+
+        </aside>
+    </main>
+    <footer style="margin-top: 100px;">
+        <a style="text-decoration: none; color: white;" href="mailto:leubr828@gmail.com">leubr828@gmail.com</a><br>
+
+        <a style="text-decoration: none; color: white;" href="tel:1699457556">(16) 99945-7556</a><br><br>
+
+        ©2022 blogzin
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>funções</title>
+</head>
+
+<body>
+    <h1>funções</h1>
+    <script>
+
+        //função simples
+        function aviso() {
+            console.log("a função foi esecutada")
+            alert("la ele")
+        }
+
+
+        //exucutar a função
+        aviso()
+
+        //função com parametros
+        function soma(numero1, numero2) {
+            var resultado = numero1 + numero2
+            return resultado
+
+        }
+
+
+        //chamando a função
+        var res = soma(5, 9)
+        console.log(res)
+
+        //escopos
+        //variavel global
+        var global = 1
+
+        function escopo(){
+            //variavel local
+            var local = 2
+            console.log(global)
+            console.log(local)
+        }
+
+        escopo()
+
+        console.log(global)
+        //console.log(local)
+        
+        if (global == 1){
+            //variavel com escopo de bloco
+            let bloco = 3
+            console.log(bloco)
+        }
+
+        //console.log(bloco)
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercicio 2</title>
+    <style>
+        body{
+            background-color: lightslategray;
+            text-align: center;
+        }
+    </style>
+</head>
+</head>
+<body>
+    <h2>exercicio 2</h2>
+
+    <label for="numero">numero</label><br>
+    <input type="number" id ="numero" placeholder="digite um numero"><br><br>
+    
+    <button type="button" onclick="verificarNumero()">verificar</button>
+    <h3 id="resultado"></h3>
+
+    <script>
+        function verificarNumero(){
+            var numero = document.getElementById("numero").value 
+            console.log(numero)
+            var resto = Number(numero) % 2
+            console.log(resto)
+            var parOuImpar = ""
+
+            if(resto == 0){
+                parOuImpar = "par"
+            }
+            else{
+                parOuImpar = "impar"
+            }
+
+            document.getElementById("resultado").textContent = `o numero ${numero} é ${parOuImpar}!`
+        }
+    </script>
+</body>
+</html>

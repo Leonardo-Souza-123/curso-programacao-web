@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>script</title>
+</head>
+<body>
+   <h2>JAVASCRIPT</h2>
+   <script>
+    //variavel comum
+    var nome = "Léo"
+    console.log(nome)
+    //variavel com escopo de bloco
+    let idade = 14
+    console.log(idade)
+
+   //valor constante 
+    const pi = 3.14
+    console.log(pi)
+
+    //booleano
+    var booleano = true
+    console.log(booleano)
+    console.log(typeof booleano)
+    
+    //nulo
+    var nulo = null
+    console.log(nulo)
+    console.log(typeof nulo) 
+
+
+    //indefinido
+    var indefinido = undefined
+    console.log(indefinido)
+    console.log(typeof indefinido)
+
+    //declarar vareavel sem atribuir valor tbm é underfined
+    var indef 
+    console.log(indef)
+    console.log(typeof indef)
+
+    //numero intereiro
+    var intereiro = 10
+    console.log(intereiro)
+    console.log(typeof intereiro)
+
+
+    //numero decimal
+    var decimal =3.14
+    console.log(decimal)
+    console.log(typeof decimal)
+
+    //texto 
+    var texto = "isso é um texto"
+    console.log(texto)
+    console.log(typeof texto)
+
+
+    //array (vetor),  conjunto de valores separados por virgula
+    var vetor =[1,2,3,4,5]
+    console.log(vetor)
+    console.log(typeof vetor)
+
+    //objeto, conjunto de dados agrupados por chave e valor
+    //tambem separados por virgulas
+    var objeto = {
+         nome: "léo",
+         idade: 13,
+         brasileiro: true
+    }
+
+    console.log(objeto)
+    console.log(typeof objeto)
+
+    //mudando o tipo da variavel
+    var a = "texto"
+    console.log(typeof a)
+    a = 10
+    console.log(typeof a)
+
+    //mudando um valor de um array
+    var alfabeto = ["a","b","c","d","e"]
+    console.log(alfabeto)
+    alfabeto[1] = "f"
+    console.log(alfabeto)
+
+    //se não passarmos o valor da posição, mudaremos todo o valor da variavel
+    alfabeto = "g"
+    console.log(alfabeto)
+
+    //mudando o valor de um campo de um objeto
+    var objeto = {
+         nome: "léo",
+         idade: 13,
+        
+    }
+
+    objeto.nome = "leuzin"
+    objeto["idade"] = 14
+    console.log(objeto)
+
+    //concatenar string
+    console.log("hello " + "world")
+
+    var nome = "Léo" 
+    console.log("meu nome é " + nome)
+
+    var ano = 2022
+    console.log("estamos no ano de " + ano)
+
+    //template string
+    console.log(`meu nome é ${nome} e ano que vem será ${ano+1}`)
+
+   </script> 
+</body>
+</html>
