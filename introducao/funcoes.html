@@ -59,10 +59,37 @@
         //console.log(bloco)
 
 
+        //arrow functions
+        //sem nenhum parametro, precisa dos parentes vazio
+        const semParametro = () => {
+            console.log("função sem parametros")
+        } 
+        semParametro()
+
+        //somente um parametro, no precisa dew parenteses
+        const comParametro = parametro => {
+            console.log(parametro)
+        }
+
+        comParametro ("função com um parametro")
+
+
+        //mais de um parametro precisa de parenteses
+        const multiParametro = (parametro1, parametro2) => {
+            console.log({parametro1, parametro2})
+        }
+
+        multiParametro("P1","P2")
 
 
 
+        //Arrow function dentro de metodos que recebem função
+        var valores =[1,2,3,4]
+        valores.forEach(valor => console.log(valor))
 
+        //retornando algo com arrow functions
+        var dobro =valores.map(valor => valor * 2)
+        console.log(dobro)
 
 
     </script>
