@@ -1,19 +1,98 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulário</title>
 </head>
+
 <body>
-    <h2>Inicio do Formulário</h2>
-    <label for="nome">Nome:</label>
-    <input type="text" id="nome" placeholder="Digite o seu nome">
-    <br>
-    <label for="idade">Idade:</label>
-    <input type="number" id="idade" placeholder="Digite a sua idade">
-    <br><br>
-    <button>Enviar dados</button>
+    <form id="formulario">
+        <h2>Inicio do Formulário</h2>
+        <h3>Informações pessoais</h3>
+
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" placeholder="Digite o seu nome">
+        <br>
+        <label for="idade">Idade:</label>
+        <input type="number" id="idade" placeholder="Digite a sua idade">
+        <br>
+        <label for="date nascimento">Data de nascimento</label>
+        <input type="date" name="data do seu nascimento" id="data nascimento">
+        <br>
+        <label for="Hora nascimento">Hora do nascimento</label>
+        <input type="time" name="Hora do seu nascimento" id="Hora nacimento">
+        <br>
+        <label for="hora cadastro">Data/Hora/Cadastro</label>
+        <input type="datetime-local" name="Data hora do cadastro" id="hora cadastro">
+        <br>
+        <label>Sexo:</label>
+        <label>
+            <input type="radio" name="Sexo" id=" Sexo-m" value="masculino">
+            Masculino
+        </label>
+        <label>
+            <input type="radio" name="Sexo" id=" Sexo-f" value="Feminino">
+            Feminino
+        </label>
+        <br>
+        <label>Linguagens</label>
+        <label>
+            <input type="checkbox" name="Linguagem" id=" Linguagem-1" value="HTML">
+            HTML
+        </label>
+        <label>
+            <input type="checkbox" name="Linguagem" id=" Linguagem-2" value="CSS">
+            CSS
+        </label>
+        <label>
+            <input type="checkbox" name="Linguagem" id=" Linguagem-3" value="JAAVASCRIPT">
+            JAAVASCRIPT
+        </label>
+        <br>
+        <label for="programa">Você já Programou?</label>
+        <select name="programa" id="programa">
+            <option value="sim">sim</option>
+            <option value="não">não</option>
+        </select>
+        <br>
+        <label for="bio">Bio:</label>
+        <br>
+        <textarea name="Bio" id="bio" cols="40" rows="10"></textarea>
+
+        <h3>Informações de login</h3>
+        <label for="email"> Email</label>
+        <input type="email" name="email" id="email" placeholder="Digite seu Email:">
+        <br>
+        <label for="senha">Digite sua senha:</label>
+        <input type="password" name="senha" id="senha" placeholder="Digite sua senha:">
+        <br>
+
+        <h3>informações adicionais</h3>
+        <br>
+        <label for="nivel">Nivel de conhecimento html</label>
+        <input type="range" name="nivel" id="nivel" min="0" max="5" value="0">
+        <br>
+        <label for="cor">Cor preferida</label>
+        <input type="color" name="cor" id="cor">
+        <br>
+        <label for="documento">selecione a foto</label>
+        <input type="file" name="documento" id="documento" accept=".jpg">
+
+        <br><br>
+        <button type="button" id="enviar" onclick="enviaDados()">Enviar dados </button>
+        <button type="submit" id="submeter">submeter</button>
+    </form>
+
+    <script>
+        alert("Seja bem-vindo")
+        console.log("Seja bem-vindo")
+        function enviaDados() {
+            alert("Dados enviados com sucesso")
+        }
+    </script>
 </body>
+
 </html>
